@@ -1,0 +1,1610 @@
+(PCB FT232PUMP
+ (description
+  (timeStamp "2016 11 20 05 43 14")
+  (program "CAPTURE.EXE" (Version "16.6.0.d001"))
+  (source "Original data from OrCAD/CAPTURE schematic")
+  (title "")
+  (date "Sunday, November 20, 2016")
+  (document "F:\\WORK\\³Ì½Ü\\FT232 PUMP\\FT232PUMP.DSN")
+  (revision "")
+  (organization "")
+  (address1 "")
+  (address2 "")
+  (address3 "")
+  (address4 "")
+  (partvaluecombine "{Value}")
+  (pcbfootprintcombine "{PCB Footprint}"))
+ (structure )
+ (placement
+  (component ADUM4160
+   (place U8
+    (property 
+     ("PCB Footprint" SOP16)
+     (timestamp 00000284)
+     ("Source Package" ADUM4160)
+     (Value ADUM4160))))
+  (component "OPTO ISOLATOR-A_0"
+   (place U7
+    (property 
+     ("PCB Footprint" "TLP280-1")
+     (timestamp 00000938)
+     ("Source Package" "OPTO ISOLATOR-A_0")
+     (Value "TLP280-1"))))
+  (component "HEADER 8X2"
+   (place J1
+    (property 
+     ("PCB Footprint" "HEADER16-POL")
+     (timestamp 00001CE7)
+     ("Source Package" "HEADER 8X2")
+     (Value "HEADER 8X2"))))
+  (component FUSE
+   (place F1
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000097D)
+     ("Source Package" FUSE)
+     (Value FUSE))))
+  (component SN74LVC1G08
+   (place U5
+    (property 
+     ("PCB Footprint" "SOT23-5")
+     (timestamp 00001655)
+     ("Source Package" SN74LVC1G08)
+     (Value SN74LVC1G08))))
+  (component "CAP NP"
+   (place C1
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000008E)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C2
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000018E)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C3
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000001BE)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C4
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000001D8)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C5
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000015A4)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C6
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000158)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C8
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000153D)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C30
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000029E)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C31
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000002CB)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C32
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000003EE)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C33
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000408)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C34
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000EA7)
+     ("Source Package" "CAP NP")
+     (Value 105)))
+   (place C35
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00001605)
+     ("Source Package" "CAP NP")
+     (Value 105)))
+   (place C36
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000006DA)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C37
+    (property 
+     ("PCB Footprint" 1206)
+     (timestamp 000006B8)
+     ("Source Package" "CAP NP")
+     (Value 10u)))
+   (place C38
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000648)
+     ("Source Package" "CAP NP")
+     (Value 104)))
+   (place C11
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000144E)
+     ("Source Package" "CAP NP")
+     (Value 104))))
+  (component LED
+   (place D1
+    (property 
+     ("PCB Footprint" "LED-0805")
+     (timestamp 00000F2B)
+     ("Source Package" LED)
+     (Value LED)))
+   (place D2
+    (property 
+     ("PCB Footprint" "LED-0805")
+     (timestamp 00000F3B)
+     ("Source Package" LED)
+     (Value LED))))
+  (component "CONNECTOR DB9"
+   (place J3
+    (property 
+     ("PCB Footprint" "DB9-HM")
+     (timestamp 0000196B)
+     ("Source Package" "CONNECTOR DB9")
+     (Value "CONNECTOR DB9"))))
+  (component FT232RL
+   (place U6
+    (property 
+     ("PCB Footprint" SSOP28)
+     (timestamp 000005B2)
+     ("Source Package" FT232RL)
+     (Value FT232RL))))
+  (component CON6_1
+   (place J6
+    (property 
+     ("PCB Footprint" FCI_61729A)
+     (timestamp 00000DCF)
+     ("Source Package" CON6_1)
+     (Value CON6))))
+  (component R
+   (place R8
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000EC1)
+     ("Source Package" R)
+     (Value 1M)))
+   (place R9
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000037A)
+     ("Source Package" R)
+     (Value 28R)))
+   (place R10
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000360)
+     ("Source Package" R)
+     (Value 28R)))
+   (place R11
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000004F0)
+     ("Source Package" R)
+     (Value 28R)))
+   (place R12
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 0000050C)
+     ("Source Package" R)
+     (Value 28R)))
+   (place R13
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000964)
+     ("Source Package" R)
+     (Value 800R)))
+   (place R14
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 00000A18)
+     ("Source Package" R)
+     (Value 4.7K)))
+   (place R15
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000013A8)
+     ("Source Package" R)
+     (Value 1K)))
+   (place R16
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000013C1)
+     ("Source Package" R)
+     (Value 1K)))
+   (place R17
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000005E6)
+     ("Source Package" R)
+     (Value 4.7K)))
+   (place R18
+    (property 
+     ("PCB Footprint" 0805)
+     (timestamp 000000C5)
+     ("Source Package" R)
+     (Value 0))))
+  (component ADM3251E
+   (place U1
+    (property 
+     ("PCB Footprint" SOP20)
+     (timestamp 0000006C)
+     ("Source Package" ADM3251E)
+     (Value ADUM3251E)))))
+ (library
+  (image ADM3251E
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\USER.OLB))
+   (pin 999 1
+    (property 
+     (pinname NC)
+     (pintype 4)
+     (Name NC)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname VCC)
+     (pintype 4)
+     (Name VCC)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname VCC)
+     (pintype 4)
+     (Name VCC)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 5
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 6
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 6)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 5)
+     ("Is No Connect" False)))
+   (pin 999 7
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 7)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 6)
+     ("Is No Connect" False)))
+   (pin 999 8
+    (property 
+     (pinname ROUT)
+     (pintype 4)
+     (Name ROUT)
+     (Number 8)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UARTRX_B)
+     (Order 7)
+     ("Is No Connect" False)))
+   (pin 999 9
+    (property 
+     (pinname TIN)
+     (pintype 4)
+     (Name TIN)
+     (Number 9)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UART_TXD)
+     (Order 8)
+     ("Is No Connect" False)))
+   (pin 999 10
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 10)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 9)
+     ("Is No Connect" False)))
+   (pin 999 11
+    (property 
+     (pinname GNDISO)
+     (pintype 4)
+     (Name GNDISO)
+     (Number 11)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GNDISO)
+     (Order 10)
+     ("Is No Connect" False)))
+   (pin 999 12
+    (property 
+     (pinname "V-")
+     (pintype 4)
+     (Name "V-")
+     (Number 12)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00494)
+     (Order 11)
+     ("Is No Connect" False)))
+   (pin 999 13
+    (property 
+     (pinname "C2-")
+     (pintype 4)
+     (Name "C2-")
+     (Number 13)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00482)
+     (Order 12)
+     ("Is No Connect" False)))
+   (pin 999 14
+    (property 
+     (pinname C2+)
+     (pintype 4)
+     (Name C2+)
+     (Number 14)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00478)
+     (Order 13)
+     ("Is No Connect" False)))
+   (pin 999 15
+    (property 
+     (pinname RIN)
+     (pintype 4)
+     (Name RIN)
+     (Number 15)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" RXD)
+     (Order 14)
+     ("Is No Connect" False)))
+   (pin 999 16
+    (property 
+     (pinname TOUT)
+     (pintype 4)
+     (Name TOUT)
+     (Number 16)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" TXD)
+     (Order 15)
+     ("Is No Connect" False)))
+   (pin 999 17
+    (property 
+     (pinname "C1-")
+     (pintype 4)
+     (Name "C1-")
+     (Number 17)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00408)
+     (Order 16)
+     ("Is No Connect" False)))
+   (pin 999 18
+    (property 
+     (pinname C1+)
+     (pintype 4)
+     (Name C1+)
+     (Number 18)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00404)
+     (Order 17)
+     ("Is No Connect" False)))
+   (pin 999 19
+    (property 
+     (pinname V+)
+     (pintype 4)
+     (Name V+)
+     (Number 19)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00354)
+     (Order 18)
+     ("Is No Connect" False)))
+   (pin 999 20
+    (property 
+     (pinname VISO)
+     (pintype 4)
+     (Name VISO)
+     (Number 20)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00350)
+     (Order 19)
+     ("Is No Connect" False))))
+  (image SN74LVC1G08
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\USER.OLB))
+   (pin 999 1
+    (property 
+     (pinname A)
+     (pintype 4)
+     (Name A)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UARTRX_A)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname B)
+     (pintype 4)
+     (Name B)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UARTRX_B)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname Y)
+     (pintype 4)
+     (Name Y)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UART_RXD)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 5
+    (property 
+     (pinname VCC)
+     (pintype 4)
+     (Name VCC)
+     (Number 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 4)
+     ("Is No Connect" False))))
+  (image FT232RL
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\USER.OLB))
+   (pin 999 1
+    (property 
+     (pinname TXD)
+     (pintype 4)
+     (Name TXD)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UARTRX_A)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname DTR#)
+     (pintype 4)
+     (Name DTR#)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname RTS#)
+     (pintype 4)
+     (Name RTS#)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname VCCIO)
+     (pintype 4)
+     (Name VCCIO)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 5
+    (property 
+     (pinname RXD)
+     (pintype 4)
+     (Name RXD)
+     (Number 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UART_TXD)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 6
+    (property 
+     (pinname RI#)
+     (pintype 4)
+     (Name RI#)
+     (Number 6)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 5)
+     ("Is No Connect" False)))
+   (pin 999 7
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 7)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 6)
+     ("Is No Connect" False)))
+   (pin 999 8
+    (property 
+     (pinname NC)
+     (pintype 4)
+     (Name NC)
+     (Number 8)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 7)
+     ("Is No Connect" False)))
+   (pin 999 9
+    (property 
+     (pinname DSR#)
+     (pintype 4)
+     (Name DSR#)
+     (Number 9)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 8)
+     ("Is No Connect" False)))
+   (pin 999 10
+    (property 
+     (pinname DCD#)
+     (pintype 4)
+     (Name DCD#)
+     (Number 10)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 9)
+     ("Is No Connect" False)))
+   (pin 999 11
+    (property 
+     (pinname CTS#)
+     (pintype 4)
+     (Name CTS#)
+     (Number 11)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 10)
+     ("Is No Connect" False)))
+   (pin 999 12
+    (property 
+     (pinname CBUS4)
+     (pintype 4)
+     (Name CBUS4)
+     (Number 12)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 11)
+     ("Is No Connect" False)))
+   (pin 999 13
+    (property 
+     (pinname CBUS2)
+     (pintype 4)
+     (Name CBUS2)
+     (Number 13)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 12)
+     ("Is No Connect" False)))
+   (pin 999 14
+    (property 
+     (pinname CBUS3)
+     (pintype 4)
+     (Name CBUS3)
+     (Number 14)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 13)
+     ("Is No Connect" False)))
+   (pin 999 15
+    (property 
+     (pinname USBDP)
+     (pintype 4)
+     (Name USBDP)
+     (Number 15)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" DD+)
+     (Order 14)
+     ("Is No Connect" False)))
+   (pin 999 16
+    (property 
+     (pinname USBDM)
+     (pintype 4)
+     (Name USBDM)
+     (Number 16)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" "DD-")
+     (Order 15)
+     ("Is No Connect" False)))
+   (pin 999 17
+    (property 
+     (pinname 3V3OUT)
+     (pintype 4)
+     (Name 3V3OUT)
+     (Number 17)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01614)
+     (Order 16)
+     ("Is No Connect" False)))
+   (pin 999 18
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 18)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 17)
+     ("Is No Connect" False)))
+   (pin 999 19
+    (property 
+     (pinname RESET#)
+     (pintype 4)
+     (Name RESET#)
+     (Number 19)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" RST)
+     (Order 18)
+     ("Is No Connect" False)))
+   (pin 999 20
+    (property 
+     (pinname VCC)
+     (pintype 4)
+     (Name VCC)
+     (Number 20)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 19)
+     ("Is No Connect" False)))
+   (pin 999 21
+    (property 
+     (pinname GND)
+     (pintype 4)
+     (Name GND)
+     (Number 21)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 20)
+     ("Is No Connect" False)))
+   (pin 999 22
+    (property 
+     (pinname CBUS1)
+     (pintype 4)
+     (Name CBUS1)
+     (Number 22)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" CBUS1)
+     (Order 21)
+     ("Is No Connect" False)))
+   (pin 999 23
+    (property 
+     (pinname CBUS0)
+     (pintype 4)
+     (Name CBUS0)
+     (Number 23)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" CBUS0)
+     (Order 22)
+     ("Is No Connect" False)))
+   (pin 999 24
+    (property 
+     (pinname NC)
+     (pintype 4)
+     (Name NC)
+     (Number 24)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 23)
+     ("Is No Connect" False)))
+   (pin 999 25
+    (property 
+     (pinname AGND)
+     (pintype 4)
+     (Name AGND)
+     (Number 25)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 24)
+     ("Is No Connect" False)))
+   (pin 999 26
+    (property 
+     (pinname TEST)
+     (pintype 4)
+     (Name TEST)
+     (Number 26)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 25)
+     ("Is No Connect" False)))
+   (pin 999 27
+    (property 
+     (pinname OSCI)
+     (pintype 4)
+     (Name OSCI)
+     (Number 27)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 26)
+     ("Is No Connect" False)))
+   (pin 999 28
+    (property 
+     (pinname OSCO)
+     (pintype 4)
+     (Name OSCO)
+     (Number 28)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 27)
+     ("Is No Connect" False))))
+  (image "OPTO ISOLATOR-A_0"
+   (property 
+    (sourcelib "F:\\WORK\\³Ì½Ü\\FT232 PUMP\\FT232PUMP.DSN"))
+   (pin 999 1
+    (property 
+     (pinname ANODE)
+     (pintype 4)
+     (Name ANODE)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N02444)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname CATHODE)
+     (pintype 4)
+     (Name CATHODE)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" 0)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname COLLECTOR)
+     (pintype 4)
+     (Name COLLECTOR)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname EMITTER)
+     (pintype 4)
+     (Name EMITTER)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" RST)
+     (Order 3)
+     ("Is No Connect" False))))
+  (image ADUM4160
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\USER.OLB))
+   (pin 999 1
+    (property 
+     (pinname VBUS1)
+     (pintype 4)
+     (Name VBUS1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" VBUS1)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname GND1)
+     (pintype 4)
+     (Name GND1)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" 0)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname VDD1)
+     (pintype 4)
+     (Name VDD1)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00721)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname PDEN)
+     (pintype 4)
+     (Name PDEN)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00721)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 5
+    (property 
+     (pinname SPU)
+     (pintype 4)
+     (Name SPU)
+     (Number 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00721)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 6
+    (property 
+     (pinname "UD-")
+     (pintype 4)
+     (Name "UD-")
+     (Number 6)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00896)
+     (Order 5)
+     ("Is No Connect" False)))
+   (pin 999 7
+    (property 
+     (pinname UD+)
+     (pintype 4)
+     (Name UD+)
+     (Number 7)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N00900)
+     (Order 6)
+     ("Is No Connect" False)))
+   (pin 999 8
+    (property 
+     (pinname GND1)
+     (pintype 4)
+     (Name GND1)
+     (Number 8)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" 0)
+     (Order 7)
+     ("Is No Connect" False)))
+   (pin 999 9
+    (property 
+     (pinname GND2)
+     (pintype 4)
+     (Name GND2)
+     (Number 9)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 8)
+     ("Is No Connect" False)))
+   (pin 999 10
+    (property 
+     (pinname DD+)
+     (pintype 4)
+     (Name DD+)
+     (Number 10)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01207)
+     (Order 9)
+     ("Is No Connect" False)))
+   (pin 999 11
+    (property 
+     (pinname "DD-")
+     (pintype 4)
+     (Name "DD-")
+     (Number 11)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01203)
+     (Order 10)
+     ("Is No Connect" False)))
+   (pin 999 12
+    (property 
+     (pinname PIN)
+     (pintype 4)
+     (Name PIN)
+     (Number 12)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01042)
+     (Order 11)
+     ("Is No Connect" False)))
+   (pin 999 13
+    (property 
+     (pinname SPD)
+     (pintype 4)
+     (Name SPD)
+     (Number 13)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01042)
+     (Order 12)
+     ("Is No Connect" False)))
+   (pin 999 14
+    (property 
+     (pinname VDD2)
+     (pintype 4)
+     (Name VDD2)
+     (Number 14)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N01042)
+     (Order 13)
+     ("Is No Connect" False)))
+   (pin 999 15
+    (property 
+     (pinname GND2)
+     (pintype 4)
+     (Name GND2)
+     (Number 15)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 14)
+     ("Is No Connect" False)))
+   (pin 999 16
+    (property 
+     (pinname VBUS2)
+     (pintype 4)
+     (Name VBUS2)
+     (Number 16)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 15)
+     ("Is No Connect" False))))
+  (image R
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\DISCRETE.OLB))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N03783)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" 0)
+     (Order 1)
+     ("Is No Connect" False))))
+  (image FUSE
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\DISCRETE.OLB))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" USB5V)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" VBUS1)
+     (Order 1)
+     ("Is No Connect" False))))
+  (image "CAP NP"
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\DISCRETE.OLB))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 1)
+     ("Is No Connect" False))))
+  (image "HEADER 8X2"
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\OLDLIBS\\CONNECTR.OLB))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)
+     (Name 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)
+     (Name 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)
+     (Name 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4)
+     (Name 6)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" +5V)
+     (Order 5)
+     ("Is No Connect" False)))
+   (pin 999 7
+    (property 
+     (pinname 7)
+     (pintype 4)
+     (Name 7)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UART_RXD)
+     (Order 6)
+     ("Is No Connect" False)))
+   (pin 999 8
+    (property 
+     (pinname 8)
+     (pintype 4)
+     (Name 8)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 7)
+     ("Is No Connect" False)))
+   (pin 999 9
+    (property 
+     (pinname 9)
+     (pintype 4)
+     (Name 9)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UART_TXD)
+     (Order 8)
+     ("Is No Connect" False)))
+   (pin 999 10
+    (property 
+     (pinname 10)
+     (pintype 4)
+     (Name 10)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 9)
+     ("Is No Connect" False)))
+   (pin 999 11
+    (property 
+     (pinname 11)
+     (pintype 4)
+     (Name 11)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 10)
+     ("Is No Connect" False)))
+   (pin 999 12
+    (property 
+     (pinname 12)
+     (pintype 4)
+     (Name 12)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GND)
+     (Order 11)
+     ("Is No Connect" False)))
+   (pin 999 13
+    (property 
+     (pinname 13)
+     (pintype 4)
+     (Name 13)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 12)
+     ("Is No Connect" False)))
+   (pin 999 14
+    (property 
+     (pinname 14)
+     (pintype 4)
+     (Name 14)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 13)
+     ("Is No Connect" False)))
+   (pin 999 15
+    (property 
+     (pinname 15)
+     (pintype 4)
+     (Name 15)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 14)
+     ("Is No Connect" False)))
+   (pin 999 16
+    (property 
+     (pinname 16)
+     (pintype 4)
+     (Name 16)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 15)
+     ("Is No Connect" False))))
+  (image "CONNECTOR DB9"
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\OLDLIBS\\CONNECTR.OLB))
+   (pin 999 5
+    (property 
+     (pinname 5)
+     (pintype 4)
+     (Name 5)
+     (Number 5)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" GNDISO)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 9
+    (property 
+     (pinname 9)
+     (pintype 4)
+     (Name 9)
+     (Number 9)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)
+     (Name 4)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 8
+    (property 
+     (pinname 8)
+     (pintype 4)
+     (Name 8)
+     (Number 8)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)
+     (Name 3)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" TXD)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 7
+    (property 
+     (pinname 7)
+     (pintype 4)
+     (Name 7)
+     (Number 7)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 5)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" RXD)
+     (Order 6)
+     ("Is No Connect" False)))
+   (pin 999 6
+    (property 
+     (pinname 6)
+     (pintype 4)
+     (Name 6)
+     (Number 6)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 7)
+     ("Is No Connect" False)))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     (Order 8)
+     ("Is No Connect" False))))
+  (image LED
+   (property 
+    (sourcelib C:\\CADENCE\\SPB_16.6\\TOOLS\\CAPTURE\\LIBRARY\\IEC\\DEVICE.OLB))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N06769)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" CBUS0)
+     (Order 1)
+     ("Is No Connect" False))))
+  (image CON6_1
+   (property 
+    (sourcelib "F:\\WORK\\³Ì½Ü\\FT232 PUMP\\FT232PUMP.DSN"))
+   (pin 999 1
+    (property 
+     (pinname 1)
+     (pintype 4)
+     (Name 1)
+     (Number 1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" USB5V)
+     (Order 0)
+     ("Is No Connect" False)))
+   (pin 999 2
+    (property 
+     (pinname 2)
+     (pintype 4)
+     (Name 2)
+     (Number 2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" "UD-")
+     (Order 1)
+     ("Is No Connect" False)))
+   (pin 999 3
+    (property 
+     (pinname 3)
+     (pintype 4)
+     (Name 3)
+     (Number 3)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" UD+)
+     (Order 2)
+     ("Is No Connect" False)))
+   (pin 999 4
+    (property 
+     (pinname 4)
+     (pintype 4)
+     (Name 4)
+     (Number 4)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" 0)
+     (Order 3)
+     ("Is No Connect" False)))
+   (pin 999 M1
+    (property 
+     (pinname M1)
+     (pintype 4)
+     (Name M1)
+     (Number M1)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N03783)
+     (Order 4)
+     ("Is No Connect" False)))
+   (pin 999 M2
+    (property 
+     (pinname M2)
+     (pintype 4)
+     (Name M2)
+     (Number M2)
+     ("Swap Id" "-1")
+     (Type Passive)
+     ("Net Name" N03783)
+     (Order 5)
+     ("Is No Connect" False)))))
+ (network
+  (net +5V
+    (property 
+     (nettype S))
+   (pins
+     U1-2 U1-3 C1-2 U8-16 C32-1 U6-4 U6-20 R17-1 C37-1
+     C36-1 U7-4 R15-2 R16-2 C11-2 C8-2 U5-5 J1-6))
+  (net 0
+    (property 
+     (nettype S)
+     (NODENAME GND1))
+   (pins
+     U8-2 U8-8 C30-1 C31-1 U7-2 J6-4 C34-2 R8-2 C35-2))
+  (net CBUS0
+   (pins
+     U6-23 D1-2))
+  (net CBUS1
+   (pins
+     U6-22 D2-2))
+  (net DD+
+   (pins
+     R12-2 U6-15))
+  (net "DD-"
+   (pins
+     R11-2 U6-16))
+  (net GND
+    (property 
+     (nettype S))
+   (pins
+     U1-4 U1-5 U1-6 U1-7 U1-10 C1-1 U8-9 U8-15 C32-2
+     C33-2 U6-7 U6-18 U6-21 U6-25 U6-26 C38-2 C37-2 C36-2
+     R14-2 C11-1 C8-1 U5-3 J1-8 J1-10 J1-12))
+  (net GNDISO
+   (pins
+     U1-11 C4-2 C5-1 J3-5))
+  (net N00350
+   (pins
+     U1-20 C6-1 C5-2))
+  (net N00354
+   (pins
+     U1-19 C6-2))
+  (net N00404
+   (pins
+     U1-18 C2-1))
+  (net N00408
+   (pins
+     U1-17 C2-2))
+  (net N00478
+   (pins
+     U1-14 C3-1))
+  (net N00482
+   (pins
+     U1-13 C3-2))
+  (net N00494
+   (pins
+     U1-12 C4-1))
+  (net N00721
+   (pins
+     U8-3 U8-4 U8-5 C31-2))
+  (net N00896
+   (pins
+     U8-6 R9-2))
+  (net N00900
+   (pins
+     U8-7 R10-2))
+  (net N01042
+   (pins
+     U8-12 U8-13 U8-14 C33-1))
+  (net N01203
+   (pins
+     U8-11 R11-1))
+  (net N01207
+   (pins
+     U8-10 R12-1))
+  (net N01614
+   (pins
+     U6-17 C38-1))
+  (net N02444
+   (pins
+     U7-1 R13-2))
+  (net N03783
+   (pins
+     J6-M1 J6-M2 C34-1 R8-1 C35-1))
+  (net N06769
+   (pins
+     D1-1 R15-1))
+  (net N06771
+   (pins
+     D2-1 R16-1))
+  (net RST
+   (pins
+     U6-19 U7-3 R14-1))
+  (net RXD
+   (pins
+     U1-15 J3-2))
+  (net TXD
+   (pins
+     U1-16 J3-3))
+  (net UARTRX_A
+   (pins
+     U6-1 R17-2 U5-1))
+  (net UARTRX_B
+   (pins
+     U1-8 R18-2 U5-2))
+  (net UART_RXD
+   (pins
+     R18-1 U5-4 J1-7))
+  (net UART_TXD
+   (pins
+     U1-9 U6-5 J1-9))
+  (net UD+
+   (pins
+     R10-1 J6-3))
+  (net "UD-"
+   (pins
+     R9-1 J6-2))
+  (net USB5V
+    (property 
+     (nettype S))
+   (pins
+     F1-1 J6-1))
+  (net VBUS1
+   (pins
+     U8-1 C30-2 R13-1 F1-2)))
+)

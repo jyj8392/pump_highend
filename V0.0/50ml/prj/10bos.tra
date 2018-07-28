@@ -1,0 +1,37 @@
+*** Creating Trace Output File '10BOS.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"stm32f10x_it.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"interface.o"'
+### List of Objects: adding '"system.o"'
+### List of Objects: adding '"..\SRC\LIB\STM32LIB35.lib"'
+### List of Objects: adding '"..\SRC\LIB\STM32UCOSLIB.lib"'
+### List of Objects: adding '".\startup_stm32f10x_hd.o"'
+### List of Objects: adding '"system_stm32f10x.o"'
+### List of Objects: adding '"nvic.o"'
+### List of Objects: adding '"rcc.o"'
+### List of Objects: adding '"ad.o"'
+### List of Objects: adding '"gpio.o"'
+### List of Objects: adding '"pwm.o"'
+### List of Objects: adding '"tim.o"'
+### List of Objects: adding '"usart.o"'
+### List of Objects: adding '"font_data.o"'
+### List of Objects: adding '"tg320240.o"'
+### List of Objects: adding '"fft.o"'
+### ADS-LD Command completed:
+--device DARMSTM "stm32f10x_it.o" "main.o" "interface.o" "system.o" E:\D\jyj\work\新机型\薄膜按键板\CODE\OS\SRC\LIB\STM32LIB35.lib E:\D\jyj\work\新机型\薄膜按键板\CODE\OS\SRC\LIB\STM32UCOSLIB.lib ".\startup_stm32f10x_hd.o" "system_stm32f10x.o" "nvic.o" "rcc.o" "ad.o" "gpio.o" "pwm.o" "tim.o" "usart.o" "font_data.o" "tg320240.o" "fft.o" 
+--library_type=microlib --strict --scatter "10BOS.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\10BOS.map" -o 10BOS.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '10BOS.axf'
+### ADS-LD Command File: '10BOS.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '10BOS.lnp', Handle=0x0000027C
+### Writing '.lnp' file
+### ADS-LD Command file '10BOS.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

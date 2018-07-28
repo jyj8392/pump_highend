@@ -1,0 +1,1 @@
+.\libSTM32LIB35.o: ..\SRC\LIB\libSTM32LIB35.a

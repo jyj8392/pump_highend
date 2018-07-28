@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+".\stm32f10x_it.o"
+".\main.o"
+".\interface.o"
+".\communication.o"
+".\flash.o"
+"..\SRC\LIB\STM32LIB35.lib"
+"..\SRC\LIB\STM32UCOSLIB.lib"
+".\startup_stm32f10x_hd.o"
+".\system_stm32f10x.o"
+".\nvic.o"
+".\rcc.o"
+".\ad.o"
+".\gpio.o"
+".\pwm.o"
+".\tim.o"
+".\usart.o"
+".\spi.o"
+".\oled.o"
+".\font_data.o"
+".\tg320240.o"
+".\pressure.o"
+".\pump.o"
+".\pid.o"
+--library_type=microlib --strict --scatter ".\10BOS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\10BOS.map" -o .\10BOS.axf
