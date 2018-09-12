@@ -203,7 +203,7 @@ struct pumpctl_t {
 	u32 dstTime;
 	double nowFlow;
 	u32 nowTime;
-//	u32 nowCnt;
+	u8 isPIDStart;
 	
 	double calCnt;
 	double accCnt;
@@ -211,6 +211,7 @@ struct pumpctl_t {
 	u32 accTime;
 	
 	u32 maxTime;
+	struct pumpflow_t flowPara[10];
 };
 extern struct pumpctl_t PumpCtl;
 
@@ -248,8 +249,8 @@ extern struct uart4data_t frameData;
 #define WAIT	0x25
 
 /************设备信息*************/
-#define EQUID		12
-	#define MAXFLOW		100
+#define EQUID		11
+	#define MAXFLOW		50
 #define EQUSERNO	"012345"
 
 /************压力参数*************/

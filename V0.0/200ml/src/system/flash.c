@@ -11,6 +11,8 @@
 #define FLASH_ADR_BLACKLUMIN   (FLASH_BASE_ADDR + 2*7)	//8bit
 #define FLASH_ADR_KEYBEEP   (FLASH_BASE_ADDR + 2*8)	//8bit
 
+#define FLASH_ADR_FLOWPARA	(FLASH_BASE_ADDR + 2*10)
+
 void Erase_Flash(u32 flash_addr)
 {
 	RCC_HSICmd(ENABLE);
@@ -54,8 +56,20 @@ void Write32bit_Flash(u32 flash_addr, u32 flash_data)
 	RCC_HSICmd(DISABLE);
 }
 
+u16 FlashImage_setFlow = 0;
+u16 FlashImage_purgeFlow = 0;
+u8 FlashImage_flowMode = 0;
+u16 FlashImage_pressOffset = 0;
+u8 FlashImage_pressProtect = 0;
+u16 FlashImage_pressMax = 0;
+u16 FlashImage_pressMin = 0;
+u8 FlashImage_backLumin = 0;
+u8 FlashImage_keyBeep = 0;
+struct pumpflow_t FlashImage_flowPara[10];
+
 void Read_Flash(struct sys_ctl *sysctl)
 {
+	u8 i = 0;
 	sysctl->setFlow = *(u16*)(FLASH_ADR_SETFLOW);
 	sysctl->purgeFlow = *(u16*)(FLASH_ADR_PURGEFLOW);
 	sysctl->flowMode = *(u8*)(FLASH_ADR_FLOWMODE);
@@ -66,6 +80,19 @@ void Read_Flash(struct sys_ctl *sysctl)
 	sysctl->backLumin = *(u8*)(FLASH_ADR_BLACKLUMIN);
 	sysctl->keyBeep = *(u8*)(FLASH_ADR_KEYBEEP);
 	
+	for (i = 0; i < sizeof(PumpCtl.flowPara); ++i)
+		*((u8*)(PumpCtl.flowPara) + i) = *((u8*)(FLASH_ADR_FLOWPARA) + i);
+
+	FlashImage_setFlow = *(u16*)(FLASH_ADR_SETFLOW);
+	FlashImage_purgeFlow = *(u16*)(FLASH_ADR_PURGEFLOW);
+	FlashImage_flowMode = *(u8*)(FLASH_ADR_FLOWMODE);
+	FlashImage_pressOffset = *(u16*)(FLASH_ADR_PRESSOFFSET);
+	FlashImage_pressProtect = *(u8*)(FLASH_ADR_PRESSPROTECT);
+	FlashImage_pressMax = *(u16*)(FLASH_ADR_PRESSMAX);
+	FlashImage_pressMin = *(u16*)(FLASH_ADR_PRESSMIN);
+	FlashImage_backLumin = *(u8*)(FLASH_ADR_BLACKLUMIN);
+	FlashImage_keyBeep = *(u8*)(FLASH_ADR_KEYBEEP);
+
 	if (sysctl->backLumin > 9) {	//如果参数未初始化
 		sysctl->setFlow = 0;
 		sysctl->flowMode = 0;
@@ -82,34 +109,42 @@ void Read_Flash(struct sys_ctl *sysctl)
 
 void Write_Flash(struct sys_ctl *sysctl)
 {
-	static u16 setFlow = 0xffff;
-	static u16 purgeFlow = 0xffff;
-	static u8 flowMode = 0xff;
-	static u16 pressOffset = 0xffff;
-	static u8 pressProtect = 0xff;
-	static u16 pressMax = 0xffff;
-	static u16 pressMin = 0xffff;
-	static u8 backLumin = 0xff;
-	static u8 keyBeep = 0xff;
+	u8 isChangeFlowPara = 0;
+	u8 i = 0;
+	for (i = 0; i < sizeof(PumpCtl.flowPara); ++i) {
+		if (*((u8*)(PumpCtl.flowPara) + i) != *((u8*)(FlashImage_flowPara) + i)) {
+			isChangeFlowPara = 1;
+			break;
+		}
+	}
 	
-	if (sysctl->setFlow != setFlow 
-		|| sysctl->purgeFlow != purgeFlow
-		|| sysctl->flowMode != flowMode
-		|| sysctl->pressOffset != pressOffset
-		|| sysctl->pressProtect != pressProtect
-		|| sysctl->pressMax != pressMax
-		|| sysctl->pressMin != pressMin
-		|| sysctl->backLumin != backLumin
-		|| sysctl->keyBeep != keyBeep) {
+	if (sysctl->setFlow != FlashImage_setFlow 
+		|| sysctl->purgeFlow != FlashImage_purgeFlow
+		|| sysctl->flowMode != FlashImage_flowMode
+		|| sysctl->pressOffset != FlashImage_pressOffset
+		|| sysctl->pressProtect != FlashImage_pressProtect
+		|| sysctl->pressMax != FlashImage_pressMax
+		|| sysctl->pressMin != FlashImage_pressMin
+		|| sysctl->backLumin != FlashImage_backLumin
+		|| sysctl->keyBeep != FlashImage_keyBeep
+		|| isChangeFlowPara == 1) {
+		isChangeFlowPara = 0;
 		Erase_Flash(FLASH_BASE_ADDR);
-		Write16bit_Flash(FLASH_ADR_SETFLOW, sysctl->setFlow);setFlow = sysctl->setFlow;
-		Write16bit_Flash(FLASH_ADR_PURGEFLOW, sysctl->purgeFlow);purgeFlow = sysctl->purgeFlow;
-		Write16bit_Flash(FLASH_ADR_FLOWMODE, sysctl->flowMode);flowMode = sysctl->flowMode;
-		Write16bit_Flash(FLASH_ADR_PRESSOFFSET, sysctl->pressOffset);pressOffset = sysctl->pressOffset;
-		Write16bit_Flash(FLASH_ADR_PRESSPROTECT, sysctl->pressProtect);pressProtect = sysctl->pressProtect;
-		Write16bit_Flash(FLASH_ADR_PRESSMAX, sysctl->pressMax);pressMax = sysctl->pressMax;
-		Write16bit_Flash(FLASH_ADR_PRESSMIN, sysctl->pressMin);pressMin = sysctl->pressMin;
-		Write16bit_Flash(FLASH_ADR_BLACKLUMIN, sysctl->backLumin);backLumin = sysctl->backLumin;
-		Write16bit_Flash(FLASH_ADR_KEYBEEP, sysctl->keyBeep);keyBeep = sysctl->keyBeep;
+		Write16bit_Flash(FLASH_ADR_SETFLOW, sysctl->setFlow);FlashImage_setFlow = sysctl->setFlow;
+		Write16bit_Flash(FLASH_ADR_PURGEFLOW, sysctl->purgeFlow);FlashImage_purgeFlow = sysctl->purgeFlow;
+		Write16bit_Flash(FLASH_ADR_FLOWMODE, sysctl->flowMode);FlashImage_flowMode = sysctl->flowMode;
+		Write16bit_Flash(FLASH_ADR_PRESSOFFSET, sysctl->pressOffset);FlashImage_pressOffset = sysctl->pressOffset;
+		Write16bit_Flash(FLASH_ADR_PRESSPROTECT, sysctl->pressProtect);FlashImage_pressProtect = sysctl->pressProtect;
+		Write16bit_Flash(FLASH_ADR_PRESSMAX, sysctl->pressMax);FlashImage_pressMax = sysctl->pressMax;
+		Write16bit_Flash(FLASH_ADR_PRESSMIN, sysctl->pressMin);FlashImage_pressMin = sysctl->pressMin;
+		Write16bit_Flash(FLASH_ADR_BLACKLUMIN, sysctl->backLumin);FlashImage_backLumin = sysctl->backLumin;
+		Write16bit_Flash(FLASH_ADR_KEYBEEP, sysctl->keyBeep);FlashImage_keyBeep = sysctl->keyBeep;
+		
+		for (i = 0; i < sizeof(PumpCtl.flowPara) / 2; ++i)
+			Write16bit_Flash(FLASH_ADR_FLOWPARA + i*2, *((u16*)(PumpCtl.flowPara) + i));
+		for (i = 0; i < sizeof(PumpCtl.flowPara) / 2; ++i) {
+			*((u16*)(FlashImage_flowPara) + i) = *((u16*)(PumpCtl.flowPara) + i);
+
+		}
 	}
 }

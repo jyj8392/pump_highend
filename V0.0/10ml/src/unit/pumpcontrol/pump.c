@@ -26,12 +26,33 @@ struct pumpctl_t PumpCtl;
 /*******10ml********/
 #if MAXFLOW == 10
 struct pumpflow_t const PUMP_FlowCnts[] = {
+1, 6,
+2, 12,
+3, 18,
+4, 23,
+5, 29,
+6, 35,
+7, 41,
+8, 47,
+9, 53,
 10, 59,
 20, 117,
-50, 283,
+30, 176,
+40, 234,
+50, 293,
+60, 351,
+70, 410,
+80, 468,
+90, 527,
 100, 585,
 200, 1170,
+300, 1755,
+400, 2340,
 500, 2925,
+600, 3510,
+700, 4095,
+800, 4680,
+900, 5265,
 1000, 5850,
 2000, 11701,
 5000, 29252,
@@ -128,24 +149,52 @@ void SetStep(void)
 void PumpSetFlow(u16 setFlow)
 {
 	PumpCtl.startFlow = PumpCtl.nowFlow;
-	PumpCtl.dstFlow = (double)setFlow;
+	PumpCtl.dstFlow = setFlow;
 	PumpCtl.nowTime = 0;
+	PumpCtl.isPIDStart = 0;
 	PumpCtl.dCndMax = PumpCtl.calCnt - PumpCtl.accCnt;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif	
 }
 
 void PumpStart(u16 setFlow)
 {
 	if (PumpCtl.nowState == 1) return;
 	
+	if (GetFlowPara(setFlow) < 20) {
+		TIM2->PSC = 360;
+		PumpCtl.dstInterval = 100000 / GetFlowPara(setFlow);
+	} else {
+		TIM2->PSC = 36;
+		PumpCtl.dstInterval = 1000000 / GetFlowPara(setFlow);
+	}
+	PumpCtl.maxTime = (0xffffffff / (2000000 / (PumpCtl.dstInterval-1)) * 100);
+	
+	
 	PumpCtl.nowInterval = 2000;
 	TIM2->ARR = PumpCtl.nowInterval;
 	PumpCtl.startFlow = 0;
-	PumpCtl.dstFlow = (double)setFlow;
+	PumpCtl.dstFlow = setFlow;
 	PumpCtl.nowFlow = PumpCtl.startFlow;
 	PumpCtl.nowTime = 0;
+	PumpCtl.isPIDStart = 0;
 	PumpCtl.dCndMax = 0;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif	
 	
 	PumpCtl.nowState = 1;
 	PumpCtl.accCnt = 0;
@@ -153,9 +202,9 @@ void PumpStart(u16 setFlow)
 	PumpCtl.calCnt = 0;
 	PumpCtl.dCndMax = 0;
 	
-	TIM_Cmd(TIM2, ENABLE);
-	TIM_Cmd(TIM3, ENABLE);
 	TIM_Cmd(TIM4, ENABLE);
+	TIM_Cmd(TIM3, ENABLE);
+	TIM_Cmd(TIM2, ENABLE);
 }
 
 void PumpStop(void)
@@ -167,7 +216,15 @@ void PumpStop(void)
 	PumpCtl.dstFlow = 0;
 	PumpCtl.nowTime = 0;
 	PumpCtl.dCndMax = PumpCtl.calCnt - PumpCtl.accCnt;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif	
 	
 	TIM_Cmd(TIM4, DISABLE);
 	if (PumpCtl.sysctl->pressProtect == 1) {
@@ -185,9 +242,10 @@ u16 GetFlowPara(double flow)
 	
 	if (flow == 0) flow = 100;
 		
-	for (i = 0; i < 10 && flow > PUMP_FlowCnts[i].index; ++i);
+	for (i = 0; i < FLOWPATALEN && flow > PUMP_FlowCnts[i].index; ++i);
 	if (i == 10)
-		cnt = (flow - PUMP_FlowCnts[9].index) * (PUMP_FlowCnts[9].cnt - PUMP_FlowCnts[8].cnt) / (PUMP_FlowCnts[9].index - PUMP_FlowCnts[8].index) + PUMP_FlowCnts[9].cnt;
+		cnt = (flow - PUMP_FlowCnts[FLOWPATALEN-1].index) * (PUMP_FlowCnts[FLOWPATALEN-1].cnt - PUMP_FlowCnts[FLOWPATALEN-2].cnt) 
+			/ (PUMP_FlowCnts[FLOWPATALEN-1].index - PUMP_FlowCnts[FLOWPATALEN-2].index) + PUMP_FlowCnts[FLOWPATALEN-1].cnt;
 	else if (i == 0) 
 		cnt = PUMP_FlowCnts[i].cnt * flow / PUMP_FlowCnts[i].index;
 	else {

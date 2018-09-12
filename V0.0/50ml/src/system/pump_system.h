@@ -203,7 +203,7 @@ struct pumpctl_t {
 	u32 dstTime;
 	double nowFlow;
 	u32 nowTime;
-//	u32 nowCnt;
+	u8 isPIDStart;
 	
 	double calCnt;
 	double accCnt;
@@ -211,6 +211,7 @@ struct pumpctl_t {
 	u32 accTime;
 	
 	u32 maxTime;
+	struct pumpflow_t flowPara[10];
 };
 extern struct pumpctl_t PumpCtl;
 

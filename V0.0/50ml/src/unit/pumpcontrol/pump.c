@@ -26,12 +26,33 @@ struct pumpctl_t PumpCtl;
 /*******10ml********/
 #if MAXFLOW == 10
 struct pumpflow_t const PUMP_FlowCnts[] = {
+1, 6,
+2, 12,
+3, 18,
+4, 23,
+5, 29,
+6, 35,
+7, 41,
+8, 47,
+9, 53,
 10, 59,
 20, 117,
-50, 283,
+30, 176,
+40, 234,
+50, 293,
+60, 351,
+70, 410,
+80, 468,
+90, 527,
 100, 585,
 200, 1170,
+300, 1755,
+400, 2340,
 500, 2925,
+600, 3510,
+700, 4095,
+800, 4680,
+900, 5265,
 1000, 5850,
 2000, 11701,
 5000, 29252,
@@ -131,7 +152,15 @@ void PumpSetFlow(u16 setFlow)
 	PumpCtl.dstFlow = (double)setFlow;
 	PumpCtl.nowTime = 0;
 	PumpCtl.dCndMax = PumpCtl.calCnt - PumpCtl.accCnt;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif	
 }
 
 void PumpStart(u16 setFlow)
@@ -145,8 +174,15 @@ void PumpStart(u16 setFlow)
 	PumpCtl.nowFlow = PumpCtl.startFlow;
 	PumpCtl.nowTime = 0;
 	PumpCtl.dCndMax = 0;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
-	
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif		
 	PumpCtl.nowState = 1;
 	PumpCtl.accCnt = 0;
 	PumpCtl.accTime = 0;
@@ -167,8 +203,15 @@ void PumpStop(void)
 	PumpCtl.dstFlow = 0;
 	PumpCtl.nowTime = 0;
 	PumpCtl.dCndMax = PumpCtl.calCnt - PumpCtl.accCnt;
-	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow * 5);
-	
+#if MAXFLOW == 50
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 10);
+#endif	
+#if MAXFLOW == 10 || MAXFLOW == 100
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 2);
+#endif	
+#if MAXFLOW == 200
+	PID_Init(0.8, 0, 0, PumpCtl.dstFlow / 10, PumpCtl.dstFlow / 4);
+#endif		
 	TIM_Cmd(TIM4, DISABLE);
 	if (PumpCtl.sysctl->pressProtect == 1) {
 		TIM_Cmd(TIM2, DISABLE);

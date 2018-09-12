@@ -155,6 +155,7 @@ struct pumpflow_t {
 	u16 index;
 	u16 cnt;
 };
+#define FLOWPATALEN 31
 extern struct pumpflow_t const PUMP_FlowCnts[];
 struct pumppress_t {
 	u16 pg;
@@ -203,7 +204,7 @@ struct pumpctl_t {
 	u32 dstTime;
 	double nowFlow;
 	u32 nowTime;
-//	u32 nowCnt;
+	u8 isPIDStart;
 	
 	double calCnt;
 	double accCnt;
@@ -211,6 +212,7 @@ struct pumpctl_t {
 	u32 accTime;
 	
 	u32 maxTime;
+	struct pumpflow_t flowPara[FLOWPATALEN];
 };
 extern struct pumpctl_t PumpCtl;
 
