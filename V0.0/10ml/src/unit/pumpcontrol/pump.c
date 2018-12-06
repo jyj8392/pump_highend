@@ -243,7 +243,7 @@ u16 GetFlowPara(double flow)
 	if (flow == 0) flow = 100;
 		
 	for (i = 0; i < FLOWPATALEN && flow > PUMP_FlowCnts[i].index; ++i);
-	if (i == FLOWPATALEN)
+	if (i == 10)
 		cnt = (flow - PUMP_FlowCnts[FLOWPATALEN-1].index) * (PUMP_FlowCnts[FLOWPATALEN-1].cnt - PUMP_FlowCnts[FLOWPATALEN-2].cnt) 
 			/ (PUMP_FlowCnts[FLOWPATALEN-1].index - PUMP_FlowCnts[FLOWPATALEN-2].index) + PUMP_FlowCnts[FLOWPATALEN-1].cnt;
 	else if (i == 0) 
